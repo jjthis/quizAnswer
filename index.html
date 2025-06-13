@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 넌센스 퀴즈 정답</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            font-family: 'Nunito', sans-serif;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(30, 60, 114, 0.9);
+            padding: 1rem;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        form {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        input[type="text"] {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            width: 70%;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            outline: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #ff6b6b;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff8787;
+        }
+
+        main {
+            padding: 1rem;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        #results-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #results-list li {
+            background: rgba(255, 255, 255, 0.2);
+            margin-bottom: 0.5rem;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            word-break: break-all;
+        }
+
+        #load-more-container {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        #load-more-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 8px;
+            background: #4caf50;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #load-more-btn:hover {
+            background: #66bb6a;
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            input[type="text"], button, #load-more-btn {
+                font-size: 0.9rem;
+            }
+
+            main {
+                max-height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>네이버 넌센스 퀴즈 정답</h1>
+        <form id="form_quiz" method="post">
+            <input type="text" name="what" placeholder="문제를 입력하세요" autocomplete="off" autofocus>
+            <button type="submit">검색</button>
+        </form>
+    </header>
+    <main>
+        <ul id="results-list">
+        </ul>
+    </main>
+</div>
+</body>
+</html>
