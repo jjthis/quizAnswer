@@ -142,6 +142,6 @@ var app = http.createServer(function (request, response) {
 });
 
 //server start
-app.listen(3010, "localhost", function () {
+app.listen(3010, "0.0.0.0", function () {
     customLog('Server is running...', 'cl');
 });

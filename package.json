@@ -1,4 +1,10 @@
 {
+  "name": "quizanswer",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
   "dependencies": {
     "node-html-parser": "^7.0.1"
   }
